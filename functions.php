@@ -1,7 +1,9 @@
 <?php
-function the_the_setup () {
-    
+function the_theme_setup () {
+    add_theme_support('post-thumbnails');
 }
+
+add_action('init', 'the_theme_setup');
 
 function the_theme_scripts () {
     wp_enqueue_style('the-theme-style', get_stylesheet_uri());
