@@ -9,12 +9,15 @@
     			    <img src="<?= the_post_thumbnail_url('medium'); ?>" class="img-responsive" alt="">
     		    </picture>
     		</div>
-    		<div class="col-xs-7">
-    			<div class="post-title">
+    		<div class="col-xs-7 post-content">
+    			<div class="post-title text-capitalize">
     				<h2><?php the_title(); ?></h2>
     			</div>
     			<?php the_excerpt(); ?>
     		</div>
+    		<div class="post-meta">
+			    <span><b>By </b><?php the_author(); ?> </span><span><b>On </b><?php the_date() ?> </span>
+		    </div>
     	</article>
     	<?php endwhile; ?>
     	<!-- post navigation -->
