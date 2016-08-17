@@ -1,21 +1,47 @@
 header {
-    position: relative;
-    background-color: $light;
-    box-shadow: 1px 1px 2px rgba($dark, 0.75);
-    .logo {
-        h1 {
-            margin: 10px 0;
-        }
-    }
+	position: fixed;
+	left: 0;
+	width: 100%;
+	background-color: $light;
+	z-index: 997;
+	box-shadow: 1px 1px 2px rgba($dark, 0.75);
+	.logo {
+		h1 {
+			margin: 10px 0;
+		}
+	}
 }
 
 .button-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 0;
-    width: 80px;
-    height: 100%;
-    background-color: $accent-color;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	width: 80px;
+	height: 100%;
+	z-index: 999;
+	background-color: $accent-color;
+	span {
+		position: relative;
+		background-color: $light;
+		height: $bars-height;
+		width: $bars-height * 6;
+		transition: all .5s ease;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			height: $bars-height;
+			width: $bars-height * 6;
+			transition: all .5s ease;
+			background-color: $light;
+		}
+		&::before {
+			top: $bars-height * 2;
+		}
+		&::after {
+			bottom: $bars-height * 2;
+		}
+	}
 }

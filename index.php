@@ -1,15 +1,15 @@
 <?php get_header() ?>
 <div class="content-wrapper container-fluid">
-    <div class="post-wrapper col-xs-8">
+    <div class="post-wrapper col-xs-12">
     	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     	<!-- post -->
-    	<article <?= post_class() ?>>
-    		<div class="col-xs-5 post-thumbnail">
+    	<article <?= post_class() ?> data-url="<?= the_permalink(); ?>">
+    		<div class="col-xs-12 post-thumbnail">
     		    <picture>
     			    <img src="<?= the_post_thumbnail_url('medium'); ?>" class="img-responsive" alt="">
     		    </picture>
     		</div>
-    		<div class="col-xs-7 post-content">
+    		<div class="col-xs-12 post-content">
     			<div class="post-title text-capitalize">
     				<h2><?php the_title(); ?></h2>
     			</div>
@@ -25,7 +25,7 @@
     	<!-- no posts found -->
     	<?php endif; ?>
     </div>
-    <div class="sidebar col-xs-4 home-sidebar">
+    <div class="sidebar col-xs-12 home-sidebar">
         <?php dynamic_sidebar('home-sidebar'); ?>
     </div>
 </div>

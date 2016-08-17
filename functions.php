@@ -25,6 +25,7 @@ add_action('init', 'the_theme_setup');
 function the_theme_scripts () {
     wp_enqueue_style('bootstrap-css', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
     wp_enqueue_script('bootstrap-js', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js');
+    wp_enqueue_script('the-theme-script', get_stylesheet_directory_uri() . '/js/main.js', array('jquery') );
     wp_enqueue_style('the-theme-style', get_stylesheet_uri());
 }
 
