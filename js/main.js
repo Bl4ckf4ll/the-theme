@@ -27,7 +27,7 @@ jQuery(function () {
 		nav_sidebar.animate({'left': "0"}, 500);
 	});
 
-	closing_nav.click(function () {
+	closing_nav.children("span").click(function () {
 		nav_sidebar.animate({'left': "-100%"}, 500);
 	});
 });

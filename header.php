@@ -8,7 +8,7 @@
     </head>
     <body>
         <header class="container-fluid">
-            <div class="logo pull-left">
+            <div class="small-logo pull-left">
                 <a href="<?= bloginfo('home'); ?>"><h1 class="text-uppercase"><?= bloginfo("name") ?></h1></a>
             </div>
             <div class="pull-right button-menu">
@@ -17,6 +17,9 @@
         </header>
         <nav class="nav side-nav">
 			<div class="closing-nav">
+				<div class="large-logo pull-left">
+	                <a href="<?= bloginfo('home'); ?>"><h1 class="text-uppercase"><?= bloginfo("name") ?></h1></a>
+	            </div>
 				<span class="glyphicon glyphicon-menu-left"></span>
 			</div>
             <?php wp_nav_menu(); ?>
