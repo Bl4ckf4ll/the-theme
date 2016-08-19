@@ -1,5 +1,10 @@
-.content-wrapper {
+.content-wrapper,
+.single-content-wrapper {
 	width: 80%;
 	margin-left: 20%;
-	max-width: 1600px;
+}
+
+.single-content-wrapper {
+	padding-left: 0;
+	padding-right: 0;
 }

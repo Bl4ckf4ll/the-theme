@@ -11,6 +11,7 @@ jQuery(function () {
 	var nav_sidebar = jQuery(".side-nav");
 	var closing_nav = jQuery(".closing-nav");
 	var content_wrapper = jQuery(".content-wrapper");
+	var single_wrapper = jQuery(".single-content-wrapper");
 	var button_menu = jQuery(".button-menu");
 
 	console.log(wpadminbar);
@@ -21,6 +22,7 @@ jQuery(function () {
 	}
 
 	content_wrapper.css("padding-top", header.innerHeight() + 30);
+	single_wrapper.css("padding-top", header.innerHeight());
 	closing_nav.css("height", header.innerHeight());
 
 	button_menu.click( function () {

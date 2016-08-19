@@ -21,6 +21,10 @@ body {
 
 a {
   color: #4CAF50;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
 }
 
 h1,
@@ -85,16 +89,26 @@ header .small-logo h1 {
   bottom: 12px;
 }
 
-.content-wrapper {
+.content-wrapper,
+.single-content-wrapper {
   width: 80%;
   margin-left: 20%;
-  max-width: 1600px;
+}
+
+.single-content-wrapper {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .sidebar {
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 20px;
+}
+
+.sidebar-home-left {
+  height: calc(100% - 80px);
+  overflow-y: auto;
 }
 
 #footer {
@@ -138,14 +152,17 @@ header .small-logo h1 {
   font-size: 30px;
   color: #ffffff;
 }
-.side-nav .menu ul {
+.side-nav .mobile-menu {
+  display: none;
+}
+.side-nav .mobile-menu ul {
   padding: 0;
   list-style-type: none;
 }
-.side-nav .menu ul li {
+.side-nav .mobile-menu ul li {
   transition: all .5s ease;
 }
-.side-nav .menu ul li a {
+.side-nav .mobile-menu ul li a {
   display: block;
   padding: 20px;
   padding-right: 40px;
@@ -153,20 +170,49 @@ header .small-logo h1 {
   font-weight: 800;
   color: #212121;
 }
-.side-nav .menu ul li a:hover {
+.side-nav .mobile-menu ul li a:hover {
   text-decoration: none;
 }
-.side-nav .menu ul li:hover {
+.side-nav .mobile-menu ul li:hover {
   background-color: #ebebeb;
 }
-.side-nav .menu ul li:hover a {
+.side-nav .mobile-menu ul li:hover a {
   color: #212121;
 }
-.side-nav .menu ul .current_page_item {
+.side-nav .mobile-menu ul .current_page_item {
   background-color: #2E7D32;
 }
-.side-nav .menu ul .current_page_item a {
+.side-nav .mobile-menu ul .current_page_item a {
   color: #ffffff;
+}
+
+.main-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.main-menu ul {
+  left: 0;
+  padding: 0;
+  height: 100%;
+  list-style-type: none;
+}
+.main-menu ul li {
+  float: left;
+  height: 100%;
+}
+.main-menu ul li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  color: #212121;
+  text-transform: uppercase;
+  transition: all .5s ease;
+}
+.main-menu ul li a:hover {
+  background-color: #ebebeb;
 }
 
 @media screen and (max-width: 520px) {
@@ -209,6 +255,15 @@ header .small-logo h1 {
 }
 .post:hover .post-thumbnail img {
   transform: translateX(20px);
+}
+
+.single-post-wrapper {
+  padding-left: 0;
+  padding-right: 0;
+}
+.single-post-wrapper .post-thumbnail {
+  height: 300px;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */

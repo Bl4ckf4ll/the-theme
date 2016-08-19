@@ -1,5 +1,10 @@
 .sidebar {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 20px;
+}
+
+.sidebar-home-left {
+	height: calc(100% - 80px);
+	overflow-y: auto;
 }
