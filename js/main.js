@@ -18,9 +18,10 @@ jQuery(function () {
 
 	if (app.data('logged')) {
 		header.css('top', wpadminbar.innerHeight());
-		nav_sidebar.css('top', wpadminbar.innerHeight());
+		nav_sidebar.css('top', wpadminbar.innerHeight() + header.innerHeight());
 	}
 
+	nav_sidebar.css('top', header.innerHeight() + wpadminbar.innerHeight());
 	content_wrapper.css("padding-top", header.innerHeight() + 30);
 	single_wrapper.css("padding-top", header.innerHeight());
 	closing_nav.css("height", header.innerHeight());

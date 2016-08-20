@@ -2,9 +2,36 @@
 	padding-left: 30px;
 	padding-right: 30px;
 	padding-bottom: 20px;
+	a {
+		font-weight: 800;
+	}
+	input[type="submit"],
+	input[type="text"] {
+		padding: 5px;
+		border: solid 1px;
+	}
+	input[type="submit"] {
+		clear: both;
+		background-color: $accent-color;
+		color: $light;
+		border-color: $accent-color;
+	}
+	input[type="text"] {
+		background-color: $light;
+		color: $dark;
+	}
+	label {
+		width: 100%;
+	}
 }
 
 .sidebar-home-left {
 	height: calc(100% - 80px);
 	overflow-y: auto;
+}
+
+@media screen and (max-width: 520px) {
+	.sidebar-home-left {
+		display: none;
+	}
 }

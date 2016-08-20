@@ -1,4 +1,5 @@
 <?php get_header() ?>
+<?php require("components/side-nav.php"); ?>
 <div class="content-wrapper container-fluid">
     <div class="post-wrapper col-xs-12 col-md-8">
     	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

@@ -7,8 +7,8 @@
 		<?php wp_head() ?>
 	</head>
 	<body>
-		<header class="container-fluid">
-			<div class="small-logo pull-left">
+		<header>
+			<div class="logo v-align">
 				<a href="<?= bloginfo('home'); ?>"><h1 class="text-uppercase"><?= bloginfo("name") ?></h1></a>
 			</div>
 			<?php wp_nav_menu(array('menu_class' => 'main-menu')); ?>
@@ -16,15 +16,3 @@
 				<span></span>
 			</div>
 		</header>
-		<nav class="nav side-nav">
-			<div class="closing-nav">
-				<div class="large-logo pull-left">
-					<a href="<?= bloginfo('home'); ?>"><h1 class="text-uppercase"><?= bloginfo("name") ?></h1></a>
-				</div>
-				<span class="glyphicon glyphicon-menu-left"></span>
-			</div>
-			<?php wp_nav_menu(array('menu_class' => 'mobile-menu')); ?>
-			<div class="sidebar-home-left sidebar col-xs-12">
-				<?php dynamic_sidebar('home-sidebar-left'); ?>
-			</div>
-		</nav>

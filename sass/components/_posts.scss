@@ -43,4 +43,16 @@
 		height: 300px;
 		overflow: hidden;
 	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+@media screen and (max-width: 520px) {
+	.single-post-wrapper {
+		.post-thumbnail {
+			height: 100px;
+		}
+	}
 }
